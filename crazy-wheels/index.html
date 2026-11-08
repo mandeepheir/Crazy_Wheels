@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+<title>Crazy Wheels</title><link rel="icon" href="data:,"><link rel="stylesheet" href="style.css"></head><body>
+<div id="wrap"><canvas id="game" width="960" height="540"></canvas>
+<div id="hud"><div class="pill"><i class="dot"></i><b id="hC">0</b></div><div class="pill">Score <b id="hS">0</b></div><div class="pill">Lives <b id="hV">3</b></div><div class="pill" id="hN"></div><div id="bst"><i id="bf"></i></div><button class="ico" data-act="pause">II</button></div>
+<div id="touch"><button data-k="left">&#9664;</button><button data-k="right">&#9654;</button><span><button data-k="boost">Boost</button><button data-k="jump">Jump</button></span></div>
+<section class="screen on" id="menu"><h1>Crazy<br>Wheels</h1>
+<button class="btn big" data-act="play">Play</button><button class="btn" data-act="levels">Levels</button><button class="btn" data-act="skins">Skins</button><button class="btn" data-act="settings">Settings</button>
+<p class="hint">Arrows or WASD to run. Space to jump (twice!). Shift to boost. Esc to pause.</p></section>
+<section class="screen" id="levels"><h2>Pick a level</h2><div class="grid" id="lg"></div><button class="btn" data-act="menu">Back</button></section>
+<section class="screen" id="skins"><h2>Vehicle skins</h2><p>Your coins: <b id="wal"></b></p><div class="grid" id="sg"></div><button class="btn" data-act="menu">Back</button></section>
+<section class="screen" id="settings"><h2>Settings</h2><label><input type="checkbox" id="snd"> Sound effects</label><label>Volume <input type="range" id="vol" min="0" max="1" step=".05"></label><button class="btn" data-act="menu">Back</button></section>
+<section class="screen" id="pause"><h2>Paused</h2><button class="btn big" data-act="resume">Resume</button><button class="btn" data-act="restart">Restart level</button><button class="btn" data-act="menu">Quit to menu</button></section>
+<section class="screen" id="over"><h2>Out of lives</h2><p id="oS"></p><button class="btn big" data-act="restart">Try again</button><button class="btn" data-act="menu">Menu</button></section>
+<section class="screen" id="win"><h2>Level complete!</h2><p id="wS"></p><button class="btn big" id="nx" data-act="next">Next level</button><button class="btn" data-act="restart">Replay</button><button class="btn" data-act="levels">Levels</button></section>
+</div>
+<script src="js/storage.js"></script><script src="js/effects.js"></script><script src="js/levels.js"></script>
+<script src="js/player.js"></script><script src="js/ui.js"></script><script src="js/game.js"></script><script src="js/main.js"></script>
+</body></html>
